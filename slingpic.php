@@ -583,23 +583,6 @@ class Slingpic_Options {
 			
 		echo '];
 		
-		var shareOptions = {
-				shareTheme: "default",       
-				speedOver: "'.$shareOptions["speedOver"].'",          
-				speedOut: "'.$shareOptions["speedOut"].'",           
-				hideDelay: '.$shareOptions["hideDelay"].',               
-				animation: "'.$shareOptions["animation"].'",         
-				animationEffects: "'.$shareOptions["animationEffects"].'",       
-				prefix: "'.$shareOptions["prefix"].'",                 
-				opacity: "'.$shareOptions["opacity"].'",            
-				className: "'.$shareOptions["className"].'",
-				position: "'.$shareOptions["position"].'",         
-				spanWidth: "'.$shareOptions["spanWidth"].'",          
-				sliderOverlayColor: "'.$shareOptions["sliderOverlayColor"].'",   
-				popupBox : "'.$shareOptions["popupBox"].'",          
-				shareClasses: "img.'.$shareOptions["popupBox"].'"
-		};
-		
 		</script>';
 	}
 	
