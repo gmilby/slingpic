@@ -2,10 +2,10 @@
 /*
 Plugin Name: Slingpic
 Plugin URI: http://slingpic.com/
-Description: A brief description of the Plugin.
+Description: Make it easy to share images from your website. Slingpic makes it easy for visitors to your website to share images across social networks, email and blogging platforms. A visitor simply needs to roll over an image on your site and they can quickly share an image in two clicks. Benefit from incremental traffic from shared images and links back to your website from popular social networks like Facebook and Twitter, Email  and blogging platforms.
 Version: 1.0
 Author: Alex Cragg
-Author URI: http://neverbland.com
+Author URI: http://slingpic.com
 License: GPL2
 */
 ?>
