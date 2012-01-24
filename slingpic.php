@@ -62,6 +62,8 @@ class Slingpic_Options {
 		add_action( 'wp_head', array( &$this, 'script_vars' ) );
 		add_action( 'wp_print_styles', array( &$this, 'styles' ) );
 		
+		add_filter('plugin_action_links', array(&$this, 'add_settings_link'), 10, 2 );
+		
 		if ( ! get_option( 'slingpic_options' ) )
 			$this->initialize_settings();
 		
@@ -80,6 +82,20 @@ class Slingpic_Options {
 		//add_action( 'admin_print_styles-' . $admin_page, array( &$this, 'admin_styles' ) );
 		
 	}
+	
+	/**
+	 * Add Settings link to plugins - code from GD Star Ratings
+	 */
+	public function add_settings_link($links, $file) {
+		
+		$plugin_base = plugin_basename(__FILE__);
+		 
+		if ($file == $plugin_base){
+			$settings_link = '<a href="options-general.php?page=slingpic-options">'.__("Settings", "slingpic-options").'</a>';
+			array_unshift($links, $settings_link);
+		}
+		return $links;
+	}	
 	
 	/**
 	 * Create settings field
@@ -293,7 +309,7 @@ class Slingpic_Options {
 			'title'   => __( 'In Speed' ),
 			'desc'    => __( 'How fast should the bar appear?' ),
 			'type'    => 'radio',
-			'std'     => '',
+			'std'     => 'slow',
 			'choices' => array(
 				'fast' => 'Fast',
 				'slow' => 'Slow',
@@ -305,7 +321,7 @@ class Slingpic_Options {
 			'title'   => __( 'In Speed' ),
 			'desc'    => __( 'How fast should the bar appear?' ),
 			'type'    => 'radio',
-			'std'     => '',
+			'std'     => 'slow',
 			'choices' => array(
 				'fast' => 'Fast',
 				'slow' => 'Slow',
@@ -317,7 +333,7 @@ class Slingpic_Options {
 			'title'   => __( 'Out Speed' ),
 			'desc'    => __( 'How fast should the bar disappear?' ),
 			'type'    => 'radio',
-			'std'     => '',
+			'std'     => 'slow',
 			'choices' => array(
 				'fast' => 'Fast',
 				'slow' => 'Slow',
@@ -430,7 +446,11 @@ class Slingpic_Options {
 				'technorati' => 'Technorati',
 				'yahoobuzz' => 'Yahoobuzz',
 			),
-			'std'     => 0
+			'std'     =>  array (
+				'twitter' 	=> 1,
+				'facebook' 	=> 1,
+				'email' 	=> 1,
+			)
 		);		
 		
 		$this->settings['share_sites_box'] = array(
@@ -454,7 +474,22 @@ class Slingpic_Options {
 				'technorati' => 'Technorati',
 				'yahoobuzz' => 'Yahoobuzz',
 			),
-			'std'     => 0 
+			'std'     =>  array (
+				'twitter' 	=> 1,
+				'facebook' 	=> 1,
+				'email' 	=> 1,
+				'delicious' => 1,
+				'designfloat' => 1,
+				'digg' 		=> 1,
+				'friendfeed' => 1,
+				'linkedin' 	=> 1,
+				'myspace' 	=> 1,
+				'netvibes' 	=> 1,
+				'reddit' 	=> 1,
+				'stumbleupon' => 1,
+				'technorati' => 1,
+				'yahoobuzz' => 1,
+			)
 		);
 		
 		/* Advanced
