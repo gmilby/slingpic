@@ -14,20 +14,20 @@ Version:           1.01
 Make it easy to share images from your website. Slingpic makes it easy for visitors to your website to share images across social networks, email and blogging platforms. A visitor simply needs to roll over an image on your site and they can quickly share an image in two clicks. Benefit from incremental traffic from shared images and links back to your website from popular social networks like Facebook and Twitter, Email and blogging platforms.
 
 == Installation ==
-1.) Unzip slingpic.zip to the  /wp-content/plugins/ directory.
-2.) Activate the plugin through the 'Plugins' menu in WordPress.
+1. Unzip slingpic.zip to the  /wp-content/plugins/ directory.
+2. Activate the plugin through the 'Plugins' menu in WordPress.
 
 == Upgrade Notice ==
 
 == Screenshots ==
 
-1.)Website Image
+1. Website Image
 
-2.)When a user hovers over the image the SlingPic tools appears
+2. When a user hovers over the image the SlingPic tools appears
 
-3.)Clicking on a share tool (customisable) opens up a relevant diaglogue box to adjust comments
+3. Clicking on a share tool (customisable) opens up a relevant diaglogue box to adjust comments
 
-4.)Clicking on "more" opens up additional sharing tools (all customisable)
+4. Clicking on "more" opens up additional sharing tools (all customisable)
 
 == Changelog ==
 
