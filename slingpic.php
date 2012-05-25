@@ -59,7 +59,7 @@ class Slingpic_Options {
 		add_action( 'admin_menu', array( &$this, 'add_pages' ) );
 		add_action( 'admin_init', array( &$this, 'register_settings' ) );
 		add_action( 'wp_enqueue_scripts', array( &$this, 'scripts' ) );
-		add_action( 'wp_head', array( &$this, 'script_vars' ) );
+		add_action( 'wp_footer', array( &$this, 'script_vars' ) );
 		add_action( 'wp_print_styles', array( &$this, 'styles' ) );
 		
 		add_filter('plugin_action_links', array(&$this, 'add_settings_link'), 10, 2 );
@@ -349,6 +349,7 @@ class Slingpic_Options {
 		);
 		
 		 $this->settings['animation'] = array(
+			'section' => 'advanced',
 			'title'   => __( 'Animation Type' ),
 			'type'    => 'radio',
 			'desc'    => __( 'Choose how the bar should appear' ),
@@ -357,11 +358,11 @@ class Slingpic_Options {
 				'fade' => 'Fade',
 				'slide' => 'Slide',
 				'always-on' => 'Always On'
-			),
-			'section' => 'advanced',
+			)
 		);	
 
 		$this->settings['animationEffects'] = array(
+			'section' => 'advanced',
 			'title'   => __( 'Animation Effects' ),
 			'desc'    => __( 'Turn animations on or off.' ),
 			'type'    => 'radio',
@@ -369,8 +370,7 @@ class Slingpic_Options {
 			'choices' => array(
 				'0' => 'Off',
 				'1' => 'On'
-			),
-			'section' => 'advanced',
+			)
 		);				
 	
 		 $this->settings['opacity'] = array(
@@ -386,6 +386,7 @@ class Slingpic_Options {
 		);			
 	
 		 $this->settings['position'] = array(
+			'section' => 'advanced',
 			'title'   => __( 'Position of Bar' ),
 			'desc'    => __( 'Should the bar appear at the top or bottom?' ),
 			'type'    => 'radio',
@@ -393,19 +394,19 @@ class Slingpic_Options {
 			'choices' => array(
 				'top' => 'Top',
 				'bottom' => 'Bottom',
-			),
-			'section' => 'advanced',
+			)
 		);		
 		
 		$this->settings['sliderOverlayColor'] = array(
+			'section' => 'advanced',
 			'title'   => __( 'Overlay Colour' ),
 			'desc'    => __( 'Choose the colour of the bar which appears over the image.' ),
 			'std'     => '#000000',
 			'type'    => 'colour',
-			'section' => 'advanced'
 		);
 		
 		$this->settings['popupBox'] = array(
+			'section' => 'advanced',
 			'title'   => __( 'Privacy Popup Speed' ),
 			'desc'    => __( 'How fast should the privacy popup appear?' ),
 			'std'     => 'fast',
@@ -414,37 +415,47 @@ class Slingpic_Options {
 				'slow' => 'Slow',
 				'fast' => 'Fast',
 			),
-			'section' => 'advanced',
 		);	
 
-		$this->settings['shareClasses'] = array(
-			'title'   => __( 'Apply to which Image Class?' ),
-			'desc'    => __( 'The image class that the plugin will work on' ),
-			'std'     => 'img',
-			'type'    => 'text',
-			'section' => 'general'
+		$this->settings['showShare'] = array(
+			'section' => 'general',
+			'title'   => __( 'Turn on image sharing?' ),
+			'desc'    => __( 'Quickly activate or deactivate image sharing.' ),
+			'std'     => 'true',
+			'type'    => 'radio',
+			'choices' => array(
+				'true' => 'On',
+				'false' => 'Off',
+			),
 		);	
-		
+
 		$this->settings['share_sites_default'] = array(
 			'section' => 'general',
 			'title'   => __( 'Default Share Options' ),
-			'desc'    => __( 'Choose the main 3 sharing options here.' ),
+			'desc'    => __( 'Choose the main sharing options here.' ),
 			'type'    => 'social_choice',
 			'choices' => array (
-				'twitter' 	=> 'Twitter',
-				'facebook' 	=> 'Facebook',
-				'email' 	=> 'Email',
-				'delicious' => 'Delicious',
-				'designfloat' => 'Designfloat',
-				'digg' 		=> 'Digg',
-				'friendfeed' => 'Friendfeed',
-				'linkedin' 	=> 'Linkedin',
-				'myspace' 	=> 'Myspace',
-				'netvibes' 	=> 'Netvibes',
-				'reddit' 	=> 'Reddit',
-				'stumbleupon' => 'Stumbleupon',
-				'technorati' => 'Technorati',
-				'yahoobuzz' => 'Yahoobuzz',
+				'facebook'		=> 'Facebook',
+				'twitter' 		=> 'Twitter',
+				'tumblr' 		=> 'Tumblr',
+				'email' 		=> 'Email',
+				'googleplus' 	=> 'Google+',
+				'delicious' 	=> 'Delicious',
+				'linkedin' 		=> 'Linkedin',
+				'virb' 			=> 'Virb',
+				'posterous' 	=> 'Posterous',
+				'evernote' 		=> 'Evernote',
+				'stumbleupon' 	=> 'Stumbleupon',
+				'reddit' 		=> 'Reddit',
+				'gmail' 		=> 'Gmail',
+				'friendfeed' 	=> 'Friendfeed',
+				'orkut' 		=> 'Orkut',
+				'technorati' 	=> 'Technorati',
+				'yahoomail' 	=> 'Yahoomail',
+				'blogger' 		=> 'Blogger',
+				'netvibes' 		=> 'Netvibes',
+				'digg' 			=> 'Digg',
+				'designfloat' 	=> 'Designfloat'
 			),
 			'std'     =>  array (
 				'twitter' 	=> 1,
@@ -459,64 +470,96 @@ class Slingpic_Options {
 			'desc'    => __( 'Choose the sharing options that appear when you click share.' ),
 			'type'    => 'social_choice',
 			'choices' => array (
-				'twitter' 	=> 'Twitter',
-				'facebook' 	=> 'Facebook',
-				'email' 	=> 'Email',
-				'delicious' => 'Delicious',
-				'designfloat' => 'Designfloat',
-				'digg' 		=> 'Digg',
-				'friendfeed' => 'Friendfeed',
-				'linkedin' 	=> 'Linkedin',
-				'myspace' 	=> 'Myspace',
-				'netvibes' 	=> 'Netvibes',
-				'reddit' 	=> 'Reddit',
-				'stumbleupon' => 'Stumbleupon',
-				'technorati' => 'Technorati',
-				'yahoobuzz' => 'Yahoobuzz',
+				'facebook'		=> 'Facebook',
+				'twitter' 		=> 'Twitter',
+				'tumblr' 		=> 'Tumblr',
+				'email' 		=> 'Email',
+				'googleplus' 	=> 'Google+',
+				'delicious' 	=> 'Delicious',
+				'linkedin' 		=> 'Linkedin',
+				'virb' 			=> 'Virb',
+				'posterous' 	=> 'Posterous',
+				'evernote' 		=> 'Evernote',
+				'stumbleupon' 	=> 'Stumbleupon',
+				'reddit' 		=> 'Reddit',
+				'gmail' 		=> 'Gmail',
+				'friendfeed' 	=> 'Friendfeed',
+				'orkut' 		=> 'Orkut',
+				'technorati' 	=> 'Technorati',
+				'yahoomail' 	=> 'Yahoomail',
+				'blogger' 		=> 'Blogger',
+				'netvibes' 		=> 'Netvibes',
+				'digg' 			=> 'Digg',
+				'designfloat' 	=> 'Designfloat'
 			),
 			'std'     =>  array (
 				'twitter' 	=> 1,
 				'facebook' 	=> 1,
 				'email' 	=> 1,
-				'delicious' => 1,
-				'designfloat' => 1,
-				'digg' 		=> 1,
-				'friendfeed' => 1,
-				'linkedin' 	=> 1,
-				'myspace' 	=> 1,
-				'netvibes' 	=> 1,
-				'reddit' 	=> 1,
-				'stumbleupon' => 1,
-				'technorati' => 1,
-				'yahoobuzz' => 1,
 			)
+		);
+
+		$this->settings['alignShare'] = array(
+			'section' => 'general',
+			'title'   => __( 'Left or Right Align?' ),
+			'desc'    => __( 'Align the sharing options to the right or the left.' ),
+			'std'     => 'left',
+			'type'    => 'radio',
+			'choices' => array(
+				'left' => 'Left',
+				'right' => 'Right',
+			),
+		);	
+
+		$this->settings['dontShow'] = array(
+			'section' => 'general',
+			'title'   => __( 'Filter out certain image classes?' ),
+			'desc'    => __( 'The image classes that the plugin will filter out. Enter a comma separated list.' ),
+			'std'     => 'dontshow',
+			'type'    => 'text',
+		);	
+
+		$this->settings['minShareWidth'] = array(
+			'section' => 'general',
+			'title'   => __( 'Minimum image width?' ),
+			'desc'    => __( 'The minimum width of an image in pixels to add the share tool to.' ),
+			'std'     => '350',
+			'type'    => 'text',
+		);	
+
+		$this->settings['minShareHeight'] = array(
+			'section' => 'general',
+			'title'   => __( 'Minimum image height?' ),
+			'desc'    => __( 'The minimum height of an image in pixels to add the share tool to.' ),
+			'std'     => '350',
+			'type'    => 'text',
 		);
 		
 		/* Advanced
 		========================================*/
 		
 		$this->settings['spanWidth'] = array(
+			'section' => 'advanced',
 			'title'   => __( 'Image Span Width' ),
 			'desc'    => __( 'What percentage of the image should the bar cover?' ),
 			'type'    => 'text',
 			'std'     => '100%',
-			'section' => 'advanced',
 		);	
 
 		$this->settings['className'] = array(
+			'section' => 'advanced',
 			'title'   => __( 'What class to assign to caption' ),
 			'desc'    => __( 'Useful for adding custom CSS.' ),
 			'std'     => '',
 			'type'    => 'text',
-			'section' => 'advanced'
 		);	
 
 		$this->settings['prefix'] = array(
+			'section' => 'advanced',
 			'title'   => __( 'Custom HTML prefix' ),
 			'desc'    => __( 'Add custom HTML or text to the beginning of the overlay.' ),
 			'std'     => '',
 			'type'    => 'text',
-			'section' => 'advanced'
 		);	
 		
 				
@@ -590,35 +633,32 @@ class Slingpic_Options {
 	*/
 	public function scripts() {
 		
-		wp_deregister_script( 'jquery' );
-		wp_register_script( 'jquery', 'http://code.jquery.com/jquery-latest.min.js');
 		wp_enqueue_script( 'jquery' );
-		wp_register_script( 'slingpic', 'http://cdn.slingpic.com/slingpic.js', array('jquery'));
-		wp_enqueue_script( 'slingpic' );
 	
 	}
-	
+
 	public function script_vars() {
 
-		$shareOptions = get_option( 'slingpic_options' );
+		$shareOptions = get_option('slingpic_options');
 		$shareDefault = $shareOptions['share_sites_default'];
-		$shareBox = $shareOptions['share_sites_box'];
+		$shareBox = $shareOptions['share_sites_box']; ?>
 		
-		echo '<script type="text/javascript">
-		
-		var shareDefault = [';
-			foreach ( $shareDefault as $site => $value )
-			echo '"' . $site . '", ';
-			
-		echo '];
-		
-		var shareBox = [';
-			foreach ( $shareBox as $site => $value )
-			echo '"' . $site . '", ';
-			
-		echo '];
-		
-		</script>';
+		<script src="http://cdn.slingpic.com/plugin/jquery.slingPic.js"></script>
+		<script>
+			jQuery("img").slingPic({
+				primary_links: [<?php	foreach ( $shareDefault as $site => $value )
+				echo '"' . $site . '", '; ?>],
+				secondary_links: [<?php foreach ( $shareBox as $site => $value )
+				echo '"' . $site . '", '; ?>],
+				minShareWidth: <?php echo $shareOptions['minShareWidth'] ;?>, // Minimum img width to show share
+				minShareHeight: <?php echo $shareOptions['minShareHeight'] ;?>, // Minimum img height to show share
+				alignShare: '<?php echo $shareOptions['alignShare'] ;?>', // 'left' or 'right' only
+				showShare: <?php echo $shareOptions['showShare'] ;?>,
+				dontShow: '<?php echo $shareOptions['dontShow'] ;?>' // Ability to filter out certain images again (only use a class)
+			});
+		</script>
+
+		<?php	
 	}
 	
 	/**
@@ -635,12 +675,12 @@ class Slingpic_Options {
 	}
 
 	/**
-	* Styling for the options page
+	* Styling for the front
 	*
 	* @since 1.0
 	*/
 	public function styles() {
-		
+
 	}
 	
 	/**

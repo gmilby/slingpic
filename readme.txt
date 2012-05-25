@@ -8,7 +8,7 @@ Author URI:        (http://www.slingpic.com)
 Requires at least: 3.0 
 Tested up to:      3.3.1
 Stable tag:        3.0
-Version:           1.01
+Version:           2
 
 == Description ==
 Make it easy to share images from your website. Slingpic makes it easy for visitors to your website to share images across social networks, email and blogging platforms. A visitor simply needs to roll over an image on your site and they can quickly share an image in two clicks. Benefit from incremental traffic from shared images and links back to your website from popular social networks like Facebook and Twitter, Email and blogging platforms.
@@ -18,6 +18,8 @@ Make it easy to share images from your website. Slingpic makes it easy for visit
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 
 == Upgrade Notice ==
+
+Version 2 has been rewritten from the ground up and now includes new variables and sharing services. Please check the options page to make sure you're chosen services are still selected. 
 
 == Screenshots ==
 
@@ -30,6 +32,14 @@ Make it easy to share images from your website. Slingpic makes it easy for visit
 4. Clicking on "more" opens up additional sharing tools (all customisable)
 
 == Changelog ==
+
+= 2.0 =
+
+*SlingPic js script has been completely rewritten
+*New services added
+*New Style for share widget
+*All required scripts and styles moved to SlingPic CDN
+*Scripts loaded in footer to speed up page load
 
 = 1.01 =
 
