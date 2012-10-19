@@ -431,7 +431,7 @@ class Slingpic_Options {
 
 		$this->settings['share_sites_default'] = array(
 			'section' => 'general',
-			'title'   => __( 'Default Share Options' ),
+			'title'   => __( 'Primary Share Options' ),
 			'desc'    => __( 'Choose the main sharing options here.' ),
 			'type'    => 'social_choice',
 			'choices' => array (
@@ -439,63 +439,49 @@ class Slingpic_Options {
 				'twitter' 		=> 'Twitter',
 				'tumblr' 		=> 'Tumblr',
 				'email' 		=> 'Email',
-				'googleplus' 	=> 'Google+',
 				'delicious' 	=> 'Delicious',
 				'linkedin' 		=> 'Linkedin',
-				'virb' 			=> 'Virb',
-				'posterous' 	=> 'Posterous',
-				'evernote' 		=> 'Evernote',
 				'stumbleupon' 	=> 'Stumbleupon',
 				'reddit' 		=> 'Reddit',
-				'gmail' 		=> 'Gmail',
 				'friendfeed' 	=> 'Friendfeed',
-				'orkut' 		=> 'Orkut',
-				'technorati' 	=> 'Technorati',
-				'yahoomail' 	=> 'Yahoomail',
-				'blogger' 		=> 'Blogger',
-				'netvibes' 		=> 'Netvibes',
 				'digg' 			=> 'Digg',
-				'designfloat' 	=> 'Designfloat'
+				'pinterest' 	=> 'Pinterest',
+				'print' 		=> 'Print',
+				'myspace' 		=> 'MySpace'
 			),
 			'std'     =>  array (
 				'twitter' 	=> 1,
 				'facebook' 	=> 1,
 				'email' 	=> 1,
+				'pinterest'	=> 1
 			)
 		);		
 		
 		$this->settings['share_sites_box'] = array(
 			'section' => 'general',
-			'title'   => __( 'All Share Options' ),
-			'desc'    => __( 'Choose the sharing options that appear when you click share.' ),
+			'title'   => __( 'Secondary Share Options' ),
+			'desc'    => __( 'Choose the sharing options that appear when you click "more".' ),
 			'type'    => 'social_choice',
 			'choices' => array (
 				'facebook'		=> 'Facebook',
 				'twitter' 		=> 'Twitter',
 				'tumblr' 		=> 'Tumblr',
 				'email' 		=> 'Email',
-				'googleplus' 	=> 'Google+',
 				'delicious' 	=> 'Delicious',
 				'linkedin' 		=> 'Linkedin',
-				'virb' 			=> 'Virb',
-				'posterous' 	=> 'Posterous',
-				'evernote' 		=> 'Evernote',
 				'stumbleupon' 	=> 'Stumbleupon',
 				'reddit' 		=> 'Reddit',
-				'gmail' 		=> 'Gmail',
 				'friendfeed' 	=> 'Friendfeed',
-				'orkut' 		=> 'Orkut',
-				'technorati' 	=> 'Technorati',
-				'yahoomail' 	=> 'Yahoomail',
-				'blogger' 		=> 'Blogger',
-				'netvibes' 		=> 'Netvibes',
 				'digg' 			=> 'Digg',
-				'designfloat' 	=> 'Designfloat'
+				'pinterest' 	=> 'Pinterest',
+				'print' 		=> 'Print',
+				'myspace' 		=> 'MySpace'
 			),
 			'std'     =>  array (
 				'twitter' 	=> 1,
 				'facebook' 	=> 1,
 				'email' 	=> 1,
+				'pinterest' => 1
 			)
 		);
 
@@ -534,34 +520,6 @@ class Slingpic_Options {
 			'std'     => '350',
 			'type'    => 'text',
 		);
-		
-		/* Advanced
-		========================================*/
-		
-		$this->settings['spanWidth'] = array(
-			'section' => 'advanced',
-			'title'   => __( 'Image Span Width' ),
-			'desc'    => __( 'What percentage of the image should the bar cover?' ),
-			'type'    => 'text',
-			'std'     => '100%',
-		);	
-
-		$this->settings['className'] = array(
-			'section' => 'advanced',
-			'title'   => __( 'What class to assign to caption' ),
-			'desc'    => __( 'Useful for adding custom CSS.' ),
-			'std'     => '',
-			'type'    => 'text',
-		);	
-
-		$this->settings['prefix'] = array(
-			'section' => 'advanced',
-			'title'   => __( 'Custom HTML prefix' ),
-			'desc'    => __( 'Add custom HTML or text to the beginning of the overlay.' ),
-			'std'     => '',
-			'type'    => 'text',
-		);	
-		
 				
 		/* Reset
 		===========================================*/
@@ -643,23 +601,45 @@ class Slingpic_Options {
 		$shareDefault = $shareOptions['share_sites_default'];
 		$shareBox = $shareOptions['share_sites_box']; ?>
 		
-		<script src="http://cdn.slingpic.com/plugin/jquery.slingPic.js"></script>
+		<script src="http://cdn.slingpic.com/js/slingpic.plugin.js"></script>
 		<script>
-			jQuery("img").slingPic({
-				primary_links: [<?php	foreach ( $shareDefault as $site => $value )
-				echo '"' . $site . '", '; ?>],
-				secondary_links: [<?php foreach ( $shareBox as $site => $value )
-				echo '"' . $site . '", '; ?>],
-				minShareWidth: <?php echo $shareOptions['minShareWidth'] ;?>, // Minimum img width to show share
-				minShareHeight: <?php echo $shareOptions['minShareHeight'] ;?>, // Minimum img height to show share
-				alignShare: '<?php echo $shareOptions['alignShare'] ;?>', // 'left' or 'right' only
-				showShare: <?php echo $shareOptions['showShare'] ;?>,
-				dontShow: '<?php echo $shareOptions['dontShow'] ;?>' // Ability to filter out certain images again (only use a class)
+
+			jQuery(window).load(function(){
+				jQuery("img").slingPic({
+					primary_links: [<?php
+						$counter = 0;
+						foreach ( $shareDefault as $site => $value ){
+							if($counter > 0){
+								echo ", ";
+							}
+							echo '"' . $site . '"';
+							$counter++;
+						}
+					?>],
+					secondary_links: [<?php
+						$counter = 0;
+						foreach ( $shareBox as $site => $value ){
+							if($counter > 0){
+								echo ", ";
+							}
+							echo '"' . $site . '"';
+							$counter++;
+						}
+					?>],
+					minShareWidth: <?php echo $shareOptions['minShareWidth'] ;?>, // Minimum img width to show share
+					minShareHeight: <?php echo $shareOptions['minShareHeight'] ;?>, // Minimum img height to show share
+					alignShare: '<?php echo $shareOptions['alignShare'] ;?>', // 'left' or 'right' only
+					showShare: <?php echo $shareOptions['showShare'] ;?>,
+					dontShow: '<?php echo $shareOptions['dontShow'] ;?>' // Ability to filter out certain images again (only use a class)
+				});
 			});
+
 		</script>
 
 		<?php	
 	}
+
+
 	
 	/**
 	* Styling for the options page
@@ -715,4 +695,3 @@ function slingpic_option( $option ) {
 	else
 		return false;
 }
-?>
