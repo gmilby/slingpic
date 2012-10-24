@@ -1,6 +1,6 @@
 === Plugin Name ===
 
-Contributors:      Pravin Paratey, Alex Cragg, Ray Jenkin
+Contributors:      Pravin Paratey, Ben Jackson, Ray Jenkin
 Plugin Name:       SlingPic
 Plugin URI:        http://wordpress.org/extend/plugins/slingpic
 Tags:              widget, plugin, image, social network, share
@@ -32,6 +32,10 @@ Version 2 has been rewritten from the ground up and now includes new variables a
 4. Clicking on "more" opens up additional sharing tools (all customisable)
 
 == Changelog ==
+
+= 2.1.0 =
+ - Redesigned the look
+ - Optimised speed
 
 = 2.0 =
 
