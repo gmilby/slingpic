@@ -3,7 +3,7 @@
 Plugin Name: Slingpic
 Plugin URI: http://slingpic.com/
 Description: Make it easy to share images from your website. Slingpic makes it easy for visitors to your website to share images across social networks, email and blogging platforms. A visitor simply needs to roll over an image on your site and they can quickly share an image in two clicks. Benefit from incremental traffic from shared images and links back to your website from popular social networks like Facebook and Twitter, Email  and blogging platforms.
-Version: 2.1.0
+Version: 2.2.0
 Author: Pravin Paratey
 Author URI: http://slingpic.com
 License: GPL2
@@ -192,7 +192,6 @@ class Slingpic_Options {
 	 * @since 1.0
 	 */
 	public function display_setting( $args = array() ) {
-		
 		extract( $args );
 		
 		$options = get_option( 'slingpic_options' );
@@ -244,7 +243,12 @@ class Slingpic_Options {
 			case 'radio':
 				$i = 0;
 				foreach ( $choices as $value => $label ) {
-					echo '<input class="radio' . $field_class . '" type="radio" name="slingpic_options[' . $id . ']" id="' . $id . $i . '" value="' . esc_attr( $value ) . '" ' . checked( $options[$id], $value, false ) . '> <label for="' . $id . $i . '">' . $label . '</label>';
+					if($id == 'themes'){
+						echo '<input class="radio' . $field_class . '" type="radio" name="slingpic_options[' . $id . ']" id="' . $id . $i . '" value="' . esc_attr( $value ) . '" ' . checked( $options[$id], $value, false ) . '> <label style="display: inline-block; border-bottom: 1px solid gray; margin-bottom: 15px;" for="' . $id . $i . '"><img src="/wp-content/plugins/slingpic/img/'.$value.'.jpg" /></label>';
+					}else{
+						echo '<input class="radio' . $field_class . '" type="radio" name="slingpic_options[' . $id . ']" id="' . $id . $i . '" value="' . esc_attr( $value ) . '" ' . checked( $options[$id], $value, false ) . '> <label for="' . $id . $i . '">' . $label . '</label>';
+					}
+					
 					if ( $i < count( $options ) - 1 )
 						echo '<br />';
 					$i++;
@@ -485,6 +489,19 @@ class Slingpic_Options {
 			)
 		);
 
+		$this->settings['themes'] = array(
+			'section' => 'general',
+			'title'   => __( 'Select a theme' ),
+			'desc'    => __( 'Choose the theme which best matches your site' ),
+			'std'     => 'default',
+			'type'    => 'radio',
+			'choices' => array(
+				'default' => 'Default',
+				'subtle' => 'Subtle',
+				'dark' => 'Dark'
+			)
+		);
+
 		$this->settings['alignShare'] = array(
 			'section' => 'general',
 			'title'   => __( 'Left or Right Align?' ),
@@ -493,8 +510,8 @@ class Slingpic_Options {
 			'type'    => 'radio',
 			'choices' => array(
 				'left' => 'Left',
-				'right' => 'Right',
-			),
+				'right' => 'Right'
+			)
 		);	
 
 		$this->settings['dontShow'] = array(
@@ -502,14 +519,14 @@ class Slingpic_Options {
 			'title'   => __( 'Filter out certain image classes?' ),
 			'desc'    => __( 'The image classes that the plugin will filter out. Enter a comma separated list.' ),
 			'std'     => 'dontshow',
-			'type'    => 'text',
+			'type'    => 'text'
 		);	
 
 		$this->settings['minShareWidth'] = array(
 			'section' => 'general',
 			'title'   => __( 'Minimum image width?' ),
 			'desc'    => __( 'The minimum width of an image in pixels to add the share tool to.' ),
-			'std'     => '350',
+			'std'     => '200',
 			'type'    => 'text',
 		);	
 
@@ -517,7 +534,7 @@ class Slingpic_Options {
 			'section' => 'general',
 			'title'   => __( 'Minimum image height?' ),
 			'desc'    => __( 'The minimum height of an image in pixels to add the share tool to.' ),
-			'std'     => '350',
+			'std'     => '200',
 			'type'    => 'text',
 		);
 				
@@ -626,6 +643,7 @@ class Slingpic_Options {
 							$counter++;
 						}
 					?>],
+					theme: '<?php echo ($shareOptions['themes'] == 'default' ? '' : $shareOptions['themes']); ?>',
 					minShareWidth: <?php echo $shareOptions['minShareWidth'] ;?>, // Minimum img width to show share
 					minShareHeight: <?php echo $shareOptions['minShareHeight'] ;?>, // Minimum img height to show share
 					alignShare: '<?php echo $shareOptions['alignShare'] ;?>', // 'left' or 'right' only
