@@ -644,10 +644,10 @@ class Slingpic_Options {
 						}
 					?>],
 					theme: '<?php echo ($shareOptions['themes'] == 'default' ? '' : $shareOptions['themes']); ?>',
-					minShareWidth: <?php echo $shareOptions['minShareWidth'] ;?>, // Minimum img width to show share
-					minShareHeight: <?php echo $shareOptions['minShareHeight'] ;?>, // Minimum img height to show share
+					minShareWidth: <?php echo (!$shareOptions['minShareWidth'] || $shareOptions['minShareWidth'] == '' ? 0 : $shareOptions['minShareWidth']); ?>, // Minimum img width to show share
+					minShareHeight: <?php echo (!$shareOptions['minShareHeight'] || $shareOptions['minShareHeight'] == '' ? 0 : $shareOptions['minShareHeight']); ?>, // Minimum img height to show share
 					alignShare: '<?php echo $shareOptions['alignShare'] ;?>', // 'left' or 'right' only
-					showShare: <?php echo $shareOptions['showShare'] ;?>,
+					showShare: <?php echo (!$shareOptions['showShare'] ? 0 : 1); ?>,
 					dontShow: '<?php echo $shareOptions['dontShow'] ;?>' // Ability to filter out certain images again (only use a class)
 				});
 			});
