@@ -1,6 +1,6 @@
 === Plugin Name ===
 
-Contributors:      Pravin Paratey, Ben Jackson, Ray Jenkin
+Contributors:      Ben Jackson, Pravin Paratey, Ray Jenkin
 Plugin Name:       SlingPic
 Plugin URI:        http://wordpress.org/extend/plugins/slingpic
 Tags:              widget, plugin, image, social network, share
@@ -8,7 +8,7 @@ Author URI:        (http://www.slingpic.com)
 Requires at least: 3.0 
 Tested up to:      3.3.2
 Stable tag:        3.0
-Version:           2.2.1
+Version:           3.0.0
 
 == Description ==
 Make it easy to share images from your website. Slingpic makes it easy for visitors to your website to share images across social networks, email and blogging platforms. A visitor simply needs to roll over an image on your site and they can quickly share an image in two clicks. Benefit from incremental traffic from shared images and links back to your website from popular social networks like Facebook and Twitter, Email and blogging platforms.
@@ -19,7 +19,7 @@ Make it easy to share images from your website. Slingpic makes it easy for visit
 
 == Upgrade Notice ==
 
-Version 2 has been rewritten from the ground up and now includes new variables and sharing services. Please check the options page to make sure you're chosen services are still selected. 
+Version 3 has a new "Context" option which is enabled by default, please check your settings to make sure Slingpic is set up how you want. You can check slingpic.com for more information.
 
 == Screenshots ==
 
@@ -32,6 +32,12 @@ Version 2 has been rewritten from the ground up and now includes new variables a
 4. Clicking on "more" opens up additional sharing tools (all customisable)
 
 == Changelog ==
+
+= 3.0.0 =
+ - *Context Awareness*
+ - Enabling Context Awareness will make Slingpic much smarter, using the content in your blog Slingpic will provide more useful information for the user when they share.
+ - *Streamlined*
+ - Slingpic has been shrunk down from 17kb to 12kb, making it even more lightweight for your blog.
 
 = 2.2.1 =
  - Fixed bug relating to empty width/height values
