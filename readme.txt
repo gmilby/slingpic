@@ -1,14 +1,14 @@
 === Plugin Name ===
 
 Contributors:      Ben Jackson, Pravin Paratey, Ray Jenkin
-Plugin Name:       SlingPic
+Plugin Name:       Slingpic
 Plugin URI:        http://wordpress.org/extend/plugins/slingpic
 Tags:              widget, plugin, image, social network, share
 Author URI:        (http://www.slingpic.com)
 Requires at least: 3.0 
-Tested up to:      3.3.2
+Tested up to:      3.5
 Stable tag:        3.0
-Version:           3.0.0
+Version:           3.1.0
 
 == Description ==
 Make it easy to share images from your website. Slingpic makes it easy for visitors to your website to share images across social networks, email and blogging platforms. A visitor simply needs to roll over an image on your site and they can quickly share an image in two clicks. Benefit from incremental traffic from shared images and links back to your website from popular social networks like Facebook and Twitter, Email and blogging platforms.
@@ -25,13 +25,18 @@ Version 3 has a new "Context" option which is enabled by default, please check y
 
 1. Website Image
 
-2. When a user hovers over the image the SlingPic tools appears
+2. When a user hovers over the image the Slingpic tools appears
 
 3. Clicking on a share tool (customisable) opens up a relevant diaglogue box to adjust comments
 
 4. Clicking on "more" opens up additional sharing tools (all customisable)
 
 == Changelog ==
+
+= 3.1.0 =
+ - *Plugin Compatibility*
+ - With the new "show" option, you can now ensure your images get the Slingpic treatment. If you use a slideshow plugin (like flexslider or nivo) you may need to use this option to ensure Slingpic appears everywhere you want it to.
+ - all feedback is welcome just send a tweet to @slingpic or an email to ben@slingpic.com
 
 = 3.0.0 =
  - *Context Awareness*
@@ -55,10 +60,10 @@ Version 3 has a new "Context" option which is enabled by default, please check y
 
 = 2.0 =
 
- - SlingPic js script has been completely rewritten
+ - Slingpic js script has been completely rewritten
  - New services added
  - New Style for share widget
- - All required scripts and styles moved to SlingPic CDN
+ - All required scripts and styles moved to Slingpic CDN
  - Scripts loaded in footer to speed up page load
 
 = 1.01 =
@@ -72,21 +77,21 @@ Version 3 has a new "Context" option which is enabled by default, please check y
 
 == Frequently Asked Questions ==
 
-= What is SlingPic? =
+= What is Slingpic? =
 
-SlingPic is a tool to help website owners make it easier to share images that they have on their website, by allowing in-image sharing across social platforms.
+Slingpic is a tool to help website owners make it easier to share images that they have on their website, by allowing in-image sharing across social platforms.
 
 
 = How does it work? =
 
-SlingPic is a piece of code that is implemented on your website. It provides functionality that sits in-line on any image that is greater than 250x250 pixels in size. When a visitor hovers over an image, the share function appears and the visitor can share the image to a number of platforms including email, social networks or blogs.
+Slingpic is a piece of code that is implemented on your website. It provides functionality that sits in-line on any image you choose. When a visitor hovers over an image, the share function appears and the visitor can share the image to a number of platforms including email, social networks or blogs.
 
  
-= Can I customise SlingPic? =
+= Can I customise Slingpic? =
 
 You can customise which default share tools you have on your toolbar and the share tools the user can access when they select "more" on the toolbar.
 
-SlingPic supports the following platforms:
+Slingpic supports the following platforms:
 
 - Delicious
 - Digg
@@ -101,5 +106,7 @@ SlingPic supports the following platforms:
 - StumbleUpon
 - Tumblr
 - Twitter
+
+Slingpic gives you a choice of which images it appears on, a choice of themes, position of the share button over the image and many more options.
 
 == Donations ==

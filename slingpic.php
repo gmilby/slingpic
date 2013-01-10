@@ -3,7 +3,7 @@
 Plugin Name: Slingpic
 Plugin URI: http://slingpic.com/
 Description: Make it easy to share images from your website. Slingpic makes it easy for visitors to your website to share images across social networks, email and blogging platforms. A visitor simply needs to roll over an image on your site and they can quickly share an image in two clicks. Benefit from incremental traffic from shared images and links back to your website from popular social networks like Facebook and Twitter, Email  and blogging platforms.
-Version: 3.0.0
+Version: 3.1.0
 Author: Ben Jackson
 Author URI: http://slingpic.com
 License: GPL2
@@ -11,7 +11,7 @@ License: GPL2
 ?>
 <?php
 /**
-  * SlingPic Options page using the WordPress Settings API
+  * Slingpic Options page using the WordPress Settings API
   * based on the work by Aliso the Geek
   * http://alisothegeek.com/
   *
@@ -76,7 +76,7 @@ class Slingpic_Options {
 	 */
 	public function add_pages() {
 		
-		$admin_page = add_options_page( __( 'SlingPic Options' ), __( 'SlingPic Options' ), 'manage_options', 'slingpic-options', array( &$this, 'display_page' ) );
+		$admin_page = add_options_page( __( 'Slingpic Options' ), __( 'Slingpic Options' ), 'manage_options', 'slingpic-options', array( &$this, 'display_page' ) );
 		
 		add_action( 'admin_print_scripts-' . $admin_page, array( &$this, 'admin_scripts' ) );
 		//add_action( 'admin_print_styles-' . $admin_page, array( &$this, 'admin_styles' ) );
@@ -142,7 +142,7 @@ class Slingpic_Options {
 		
 		echo '<div class="wrap">
 	<div class="icon32" id="icon-options-general"></div>
-	<h2>' . __( 'SlingPic Options' ) . '</h2>';
+	<h2>' . __( 'Slingpic Options' ) . '</h2>';
 		
 		echo '<form action="options.php" method="post">';
 	
@@ -526,6 +526,14 @@ class Slingpic_Options {
 			)
 		);	
 
+		$this->settings['show'] = array(
+			'section' => 'general',
+			'title'   => __( 'Choose which images show Slingpic based on a class name.' ),
+			'desc'    => __( 'This option is very useful if your blog is using other image related plugins (overrides minShareWidth and minShareHeight)' ),
+			'std'     => '',
+			'type'    => 'text'
+		);
+
 		$this->settings['dontShow'] = array(
 			'section' => 'general',
 			'title'   => __( 'Filter out certain image classes?' ),
@@ -555,7 +563,7 @@ class Slingpic_Options {
 		
 		/* $this->settings['reset_slingpic'] = array(
 			'section' => 'reset',
-			'title'   => __( 'Reset SlingPic' ),
+			'title'   => __( 'Reset Slingpic' ),
 			'type'    => 'checkbox',
 			'std'     => 0,
 			'class'   => 'warning', // Custom class for CSS
@@ -661,7 +669,8 @@ class Slingpic_Options {
 					alignShare: '<?php echo $shareOptions['alignShare'] ;?>', // 'left' or 'right' only
 					context: <?php echo ($shareOptions['context'] ? "true" : "false"); ?>,
 					showShare: <?php echo ($shareOptions['showShare'] ? "true" : "false"); ?>,
-					dontShow: '<?php echo $shareOptions['dontShow'] ;?>' // Ability to filter out certain images again (only use a class)
+					show: '<?php echo $shareOptions['show']; ?>', // Ability to filter out certain images again (only use a class)
+					dontShow: '<?php echo $shareOptions['dontShow']; ?>' // Ability to filter out certain images again (only use a class)
 				});
 			});
 
