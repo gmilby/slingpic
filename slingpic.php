@@ -3,7 +3,7 @@
 Plugin Name: Slingpic
 Plugin URI: http://slingpic.com/
 Description: Make it easy to share images from your website. Slingpic makes it easy for visitors to your website to share images across social networks, email and blogging platforms. A visitor simply needs to roll over an image on your site and they can quickly share an image in two clicks. Benefit from incremental traffic from shared images and links back to your website from popular social networks like Facebook and Twitter, Email  and blogging platforms.
-Version: 3.1.0
+Version: 3.2.0
 Author: Ben Jackson
 Author URI: http://slingpic.com
 License: GPL2
@@ -431,6 +431,18 @@ class Slingpic_Options {
 				'true' => 'On',
 				'false' => 'Off',
 			),
+		);
+
+		$this->settings['autoShowShare'] = array(
+			'section' => 'general',
+			'title'   => __( 'Automatically expand the sharing tools?' ),
+			'desc'    => __( 'By default your visitors are required to click the share button to view the sharing options, however by turning on autoShowShare the sharing options will be visible when the vistor hovers over the image.' ),
+			'std'     => 'false',
+			'type'    => 'radio',
+			'choices' => array(
+				'true' => 'On',
+				'false' => 'Off',
+			),
 		);	
 
 		$this->settings['share_sites_default'] = array(
@@ -638,7 +650,7 @@ class Slingpic_Options {
 		$shareDefault = $shareOptions['share_sites_default'];
 		$shareBox = $shareOptions['share_sites_box']; ?>
 		
-		<script src="http://cdn.slingpic.com/js/slingpic.plugin.js?v=3"></script>
+		<script src="http://cdn.slingpic.com/js/slingpic.plugin.js?v=320"></script>
 		<script>
 
 			jQuery(window).load(function(){
@@ -668,6 +680,7 @@ class Slingpic_Options {
 					minShareHeight: <?php echo (!$shareOptions['minShareHeight'] || $shareOptions['minShareHeight'] == '' ? 0 : $shareOptions['minShareHeight']); ?>, // Minimum img height to show share
 					alignShare: '<?php echo $shareOptions['alignShare'] ;?>', // 'left' or 'right' only
 					context: <?php echo ($shareOptions['context'] ? "true" : "false"); ?>,
+					autoShowShare: <?php echo ($shareOptions['autoShowShare'] ? "true" : "false"); ?>,
 					showShare: <?php echo ($shareOptions['showShare'] ? "true" : "false"); ?>,
 					show: '<?php echo $shareOptions['show']; ?>', // Ability to filter out certain images again (only use a class)
 					dontShow: '<?php echo $shareOptions['dontShow']; ?>' // Ability to filter out certain images again (only use a class)
