@@ -3,15 +3,19 @@
 Contributors:      Ben Jackson, Pravin Paratey, Ray Jenkin
 Plugin Name:       Slingpic
 Plugin URI:        http://wordpress.org/extend/plugins/slingpic
-Tags:              widget, plugin, image, social network, share
+Tags:              widget, photography, picture, plugin, image, social network, share, blog monetization, blog revenue, del.icio.us, digg, facebook, floating social buttons, floating social widget, google plus, linkedin, pinterest, reddit, share, social bookmarking, social data, social plugin, tumblr, twitter, wordpress
 Author URI:        (http://www.slingpic.com)
 Requires at least: 3.0 
-Tested up to:      3.5
-Stable tag:        3.0
-Version:           3.2.1
+Tested up to:      3.5.1
+Stable tag:        3.2.2
+Version:           3.2.2
+
+An image sharing tool, simply hover over an image to reveal a "share" button, your image can then be easily shared across multiple social networks.
 
 == Description ==
-Make it easy to share images from your website. Slingpic makes it easy for visitors to your website to share images across social networks, email and blogging platforms. A visitor simply needs to roll over an image on your site and they can quickly share an image in two clicks. Benefit from incremental traffic from shared images and links back to your website from popular social networks like Facebook and Twitter, Email and blogging platforms.
+Make it easy to share images from your website. Slingpic makes it easy for visitors to your website to share images across social networks, email and blogging platforms. A visitor simply needs to roll over an image on your site and they can quickly share an image in two clicks. Benefit from incremental traffic from shared images and links back to your website from popular social networks like Pinterest, Facebook, Twitter, Email and blogging platforms.
+
+Find out more at [slingpic.com](http://slingpic.com/ "Slingpic")
 
 == Installation ==
 1. Unzip slingpic.zip to the  /wp-content/plugins/ directory.
@@ -32,6 +36,9 @@ Version 3 has a new "Context" option which is enabled by default, please check y
 4. Clicking on "more" opens up additional sharing tools (all customisable)
 
 == Changelog ==
+
+= 3.2.2 =
+- Updated information based on Version 3's new functionality
 
 = 3.2.1 =
 - *Bug fixes*
