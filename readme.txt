@@ -8,7 +8,7 @@ Author URI:        (http://www.slingpic.com)
 Requires at least: 3.0 
 Tested up to:      3.5
 Stable tag:        3.0
-Version:           3.2.0
+Version:           3.2.1
 
 == Description ==
 Make it easy to share images from your website. Slingpic makes it easy for visitors to your website to share images across social networks, email and blogging platforms. A visitor simply needs to roll over an image on your site and they can quickly share an image in two clicks. Benefit from incremental traffic from shared images and links back to your website from popular social networks like Facebook and Twitter, Email and blogging platforms.
@@ -32,6 +32,10 @@ Version 3 has a new "Context" option which is enabled by default, please check y
 4. Clicking on "more" opens up additional sharing tools (all customisable)
 
 == Changelog ==
+
+= 3.2.1 =
+- *Bug fixes*
+- This version fixes the following options that were previous always set to true: "Turn on image sharing?", "Automatically expand the sharing tools?", "Enable context awareness?"
 
 = 3.2.0 =
  - *Automatically show your chosen sharing options*
