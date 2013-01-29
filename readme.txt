@@ -12,7 +12,7 @@ Stable tag:        3.2.2
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
-An image sharing tool, simply hover over an image to reveal a "share" button, your image can then be easily shared across multiple social networks.
+An image sharing tool, simply hover over an image to reveal a "share" button, once clicked easily share it across multiple social networks.
 
 == Description ==
 Make it easy to share images from your website. Slingpic makes it easy for visitors to your website to share images across social networks, email and blogging platforms. A visitor simply needs to roll over an image on your site and they can quickly share an image in two clicks. Benefit from incremental traffic from shared images and links back to your website from popular social networks like Pinterest, Facebook, Twitter, Email and blogging platforms.
