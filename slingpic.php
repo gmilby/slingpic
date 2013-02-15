@@ -443,7 +443,19 @@ class Slingpic_Options {
 				'true' => 'On',
 				'false' => 'Off',
 			),
-		);	
+		);
+
+		$this->settings['copyright'] = array(
+			'section' => 'general',
+			'title'   => __( 'Add a personalised copyright message' ),
+			'desc'    => __( 'When enabled Slingpic will look at the Alt tag of the image and append its content (prefixed by the © symbol) to the end of the generated share message.' ),
+			'std'     => 'false',
+			'type'    => 'radio',
+			'choices' => array(
+				'true' => 'On',
+				'false' => 'Off',
+			),
+		);
 
 		$this->settings['share_sites_default'] = array(
 			'section' => 'general',
@@ -680,6 +692,7 @@ class Slingpic_Options {
 					minShareHeight: <?php echo (!$shareOptions['minShareHeight'] || $shareOptions['minShareHeight'] == '' ? 0 : $shareOptions['minShareHeight']); ?>, // Minimum img height to show share
 					alignShare: '<?php echo $shareOptions['alignShare'] ;?>', // 'left' or 'right' only
 					context: <?php echo $shareOptions['context']; ?>,
+					copyright: <?php echo $shareOptions['copyright']; ?>,
 					autoShowShare: <?php echo $shareOptions['autoShowShare']; ?>,
 					showShare: <?php echo $shareOptions['showShare']; ?>,
 					show: '<?php echo $shareOptions['show']; ?>', // Ability to filter out certain images again (only use a class)
