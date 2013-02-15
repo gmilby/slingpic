@@ -691,8 +691,8 @@ class Slingpic_Options {
 					minShareWidth: <?php echo (!$shareOptions['minShareWidth'] || $shareOptions['minShareWidth'] == '' ? 0 : $shareOptions['minShareWidth']); ?>, // Minimum img width to show share
 					minShareHeight: <?php echo (!$shareOptions['minShareHeight'] || $shareOptions['minShareHeight'] == '' ? 0 : $shareOptions['minShareHeight']); ?>, // Minimum img height to show share
 					alignShare: '<?php echo $shareOptions['alignShare'] ;?>', // 'left' or 'right' only
-					context: <?php echo $shareOptions['context']; ?>,
-					copyright: <?php echo $shareOptions['copyright']; ?>,
+					context: <?php if($shareOptions['context']) { echo $shareOptions['context']; } else { echo "false"; } ?>,
+					copyright: <?php if($shareOptions['copyright']) { echo $shareOptions['copyright']; } else { echo "false"; } ?>,
 					autoShowShare: <?php echo $shareOptions['autoShowShare']; ?>,
 					showShare: <?php echo $shareOptions['showShare']; ?>,
 					show: '<?php echo $shareOptions['show']; ?>', // Ability to filter out certain images again (only use a class)
