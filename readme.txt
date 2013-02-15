@@ -7,8 +7,8 @@ Tags:              widget, photography, picture, plugin, image, social network, 
 Author URI:        (http://www.slingpic.com)
 Requires at least: 3.0 
 Tested up to:      3.5.1
-Version:           3.3.0
-Stable tag:        3.3.0
+Version:           3.3.1
+Stable tag:        3.3.1
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
