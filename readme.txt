@@ -7,8 +7,8 @@ Tags:              widget, photography, picture, plugin, image, social network, 
 Author URI:        (http://www.slingpic.com)
 Requires at least: 3.0 
 Tested up to:      3.5.1
-Version:           3.3.1
-Stable tag:        3.3.1
+Version:           3.4.0
+Stable tag:        3.4.0
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,6 +38,14 @@ Version 3 has a new "Context" option which is enabled by default, please check y
 4. Clicking on "more" opens up additional sharing tools (all customisable)
 
 == Changelog ==
+
+= 3.4.0 =
+- *Auto Scroll*
+- Want your users to get straight to the right content? Our latest feature scrolls the page to whichever image was shared.
+- note: if you would not like Slinpic to perform the action please set the "noScroll" option to true in the plugin settings
+
+= 3.3.1 =
+- *bug fixes*
 
 = 3.3.0 =
 - *Add a Copyright message*

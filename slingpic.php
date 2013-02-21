@@ -3,7 +3,7 @@
 Plugin Name: Slingpic
 Plugin URI: http://slingpic.com/
 Description: Make it easy to share images from your website. Slingpic makes it easy for visitors to your website to share images across social networks, email and blogging platforms. A visitor simply needs to roll over an image on your site and they can quickly share an image in two clicks. Benefit from incremental traffic from shared images and links back to your website from popular social networks like Pinterest, Facebook, Twitter, Email and blogging platforms. Find out more at [slingpic.com](http://slingpic.com/ "Slingpic")
-Version: 3.3.1
+Version: 3.4.0
 Author: Ben Jackson
 Author URI: http://slingpic.com
 License: GPL2
@@ -564,7 +564,19 @@ class Slingpic_Options {
 			'desc'    => __( 'The image classes that the plugin will filter out. Enter a comma separated list.' ),
 			'std'     => 'dontshow',
 			'type'    => 'text'
-		);	
+		);
+
+		$this->settings['noScroll'] = array(
+			'section' => 'general',
+			'title'   => __( 'Disable auto scroll?' ),
+			'desc'    => __( 'If you would not like Slingpic to scroll your visitors to the relevant shared image set this option to True' ),
+			'std'     => 'false',
+			'type'    => 'radio',
+			'choices' => array(
+				'true' => 'On',
+				'false' => 'Off',
+			),
+		);
 
 		$this->settings['minShareWidth'] = array(
 			'section' => 'general',
@@ -691,10 +703,51 @@ class Slingpic_Options {
 					minShareWidth: <?php echo (!$shareOptions['minShareWidth'] || $shareOptions['minShareWidth'] == '' ? 0 : $shareOptions['minShareWidth']); ?>, // Minimum img width to show share
 					minShareHeight: <?php echo (!$shareOptions['minShareHeight'] || $shareOptions['minShareHeight'] == '' ? 0 : $shareOptions['minShareHeight']); ?>, // Minimum img height to show share
 					alignShare: '<?php echo $shareOptions['alignShare'] ;?>', // 'left' or 'right' only
-					context: <?php if($shareOptions['context']) { echo $shareOptions['context']; } else { echo "false"; } ?>,
-					copyright: <?php if($shareOptions['copyright']) { echo $shareOptions['copyright']; } else { echo "false"; } ?>,
-					autoShowShare: <?php echo $shareOptions['autoShowShare']; ?>,
-					showShare: <?php echo $shareOptions['showShare']; ?>,
+					context: <?php 
+						if($shareOptions['context']) {
+							echo $shareOptions['context'];
+						}
+						else
+						{
+							echo "false";
+						}
+					?>,
+					copyright: <?php
+						if($shareOptions['copyright']) {
+							echo $shareOptions['copyright'];
+						}
+						else
+						{
+							echo "false";
+						}
+					?>,
+					noScroll: <?php
+						if($shareOptions['noScroll']){
+							echo $shareOptions['noScroll'];
+						}
+						else
+						{
+							echo "false";
+						}
+					?>,
+					autoShowShare: <?php
+						if($shareOptions['autoShowShare']){
+							echo $shareOptions['autoShowShare'];
+						}
+						else
+						{
+							echo "false";
+						}
+					?>,
+					showShare: <?php
+						if($shareOptions['showShare']){
+							echo $shareOptions['showShare'];
+						}
+						else
+						{
+							echo "false";
+						}
+					?>,
 					show: '<?php echo $shareOptions['show']; ?>', // Ability to filter out certain images again (only use a class)
 					dontShow: '<?php echo $shareOptions['dontShow']; ?>' // Ability to filter out certain images again (only use a class)
 				});
