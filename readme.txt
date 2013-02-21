@@ -42,14 +42,14 @@ Version 3 has a new "Context" option which is enabled by default, please check y
 = 3.4.0 =
 - *Auto Scroll*
 - Want your users to get straight to the right content? Our latest feature scrolls the page to whichever image was shared.
-- note: if you would not like Slinpic to perform the action please set the "noScroll" option to true in the plugin settings
+- note: if you would not like Slingpic to perform the action please set the "noScroll" option to true in the plugin settings
 
 = 3.3.1 =
 - *bug fixes*
 
 = 3.3.0 =
 - *Add a Copyright message*
-- using the Alt tag Slingpic can now append a copyright message when ever someone shares an image. Simply add the name of the copyright owner plus the year and Slingpic will do the rest.
+- If your website contains copyrighted images, you can ensure that Slingpic will always append a relevant notice. Slingpic finds the relevant content in the "data-copyright" attribute of the IMG tag.
 - You can select this option in the plugin settings page
 
 = 3.2.2 =
@@ -112,6 +112,9 @@ Version 3 has a new "Context" option which is enabled by default, please check y
 
 Slingpic is a tool to help website owners make it easier to share images that they have on their website, by allowing in-image sharing across social platforms.
 
+= How do I add a copyright message? =
+
+Each image on your website is an IMG tag which looks something like this <img src="/image/cat.png" alt="a cat" />, Slingpic has an option to use the "alt" attribute of each IMG tag to create a copyright message
 
 = How does it work? =
 
