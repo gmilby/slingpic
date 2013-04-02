@@ -39,6 +39,9 @@ Version 3 has a new "Context" option which is enabled by default, please check y
 
 == Changelog ==
 
+= 3.5.0 =
+- Displays number of shares on hovering over the share button
+
 = 3.4.2 =
 - *Bug fixes*
 - Relating to the dontShow option
