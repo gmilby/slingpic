@@ -7,8 +7,8 @@ Tags:              widget, photography, picture, plugin, image, social network, 
 Author URI:        (http://www.slingpic.com)
 Requires at least: 3.0 
 Tested up to:      3.5.1
-Version:           3.4.2
-Stable tag:        3.4.2
+Version:           3.5.1
+Stable tag:        3.5.0
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,6 +38,10 @@ Version 3 has a new "Context" option which is enabled by default, please check y
 4. Clicking on "more" opens up additional sharing tools (all customisable)
 
 == Changelog ==
+
+= 3.5.1 =
+- *Bug fixes*
+- Relating to empty IMG tags and attributes
 
 = 3.5.0 =
 - Displays number of shares on hovering over the share button
