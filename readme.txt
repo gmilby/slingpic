@@ -3,7 +3,7 @@
 Contributors:      Ben Jackson, Pravin Paratey, Ray Jenkin
 Plugin Name:       Slingpic
 Plugin URI:        http://wordpress.org/extend/plugins/slingpic
-Tags:              widget, photography, picture, plugin, image, social network, share, blog monetization, blog revenue, del.icio.us, digg, facebook, floating social buttons, floating social widget, google plus, linkedin, pinterest, reddit, share, social bookmarking, social data, social plugin, tumblr, twitter, wordpress
+Tags:              Image sharing, share image, image bookmarking, add this, addtoany, analytics, bookmarks, bookmarking, share this, share, sharing, shareaholic, facebook, twitter, linkedin, pintrest,email, gmail, sharebar, stats,social media, tweet button, facebook likeblog monetization, blog revenue, del.icio.us, digg, facebook, floating social buttons, floating social widget, google plus, linkedin, pinterest, reddit, share, social bookmarking, social data, social plugin, tumblr, twitter, wordpress
 Author URI:        (http://www.slingpic.com)
 Requires at least: 3.0 
 Tested up to:      3.5.1
@@ -15,7 +15,13 @@ License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 An image sharing tool, simply hover over an image to reveal a "share" button, once clicked easily share it across multiple social networks.
 
 == Description ==
-Make it easy to share images from your website. Slingpic makes it easy for visitors to your website to share images across social networks, email and blogging platforms. A visitor simply needs to roll over an image on your site and they can quickly share an image in two clicks. Benefit from incremental traffic from shared images and links back to your website from popular social networks like Pinterest, Facebook, Twitter, Email and blogging platforms.
+Make it easy to share images from your website through a widget. Image sharing tool, Slingpic, makes it easy for visitors to your website to share images across social networks, email and blogging platforms. A visitor simply needs to roll over an image on your site and they can quickly share an image in two clicks. Benefit from incremental traffic from shared images and links back to your website from popular social networks like Pinterest, Facebook, Twitter, Email and blogging platforms.
+ 
+Recent Updates
+
+*   "Share counts" show you and your users how many times each of your images has been shared
+*   "Auto Scroll" your visitors to the exact location of the image they came to see.
+*   "Copyright" notice appended to each image share, with full publisher control.
 
 Find out more at [slingpic.com](http://slingpic.com/ "Slingpic")
 
