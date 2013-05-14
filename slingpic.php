@@ -3,7 +3,7 @@
 Plugin Name: Slingpic
 Plugin URI: http://slingpic.com/
 Description: Make it easy to share images from your website through a widget. Image sharing tool, Slingpic, makes it easy for visitors to your website to share images across social networks, email and blogging platforms. A visitor simply needs to roll over an image on your site and they can quickly share an image in two clicks. Benefit from incremental traffic from shared images and links back to your website from popular social networks like Pinterest, Facebook, Twitter, Email and blogging platforms.
-Version: 3.5.1
+Version: 3.5.2
 Author: Ben Jackson
 Author URI: http://slingpic.com
 License: GPL2
@@ -140,7 +140,7 @@ class Slingpic_Options {
 	<h2>' . __( 'Slingpic Options' ) . '</h2>';
 		
 		echo '<form action="options.php" method="post">';
-	
+		echo '<h3 style="background-color: rgba(255,102,51,0.4); padding: 10px; border-radius: 3px;">Enjoying Slingpic? Why not leave us a <a href="http://wordpress.org/support/view/plugin-reviews/slingpic">review</a> :)</h3>';
 		settings_fields( 'slingpic_options' );
 		echo '<div>';
 		do_settings_sections( $_GET['page'] );

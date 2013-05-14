@@ -6,8 +6,8 @@ Plugin URI:        http://wordpress.org/extend/plugins/slingpic
 Tags:              Image sharing, share image, image bookmarking, add this, addtoany, analytics, bookmarks, bookmarking, share this, share, sharing, shareaholic, facebook, twitter, linkedin, pintrest,email, gmail, sharebar, stats,social media, tweet button, facebook likeblog monetization, blog revenue, del.icio.us, digg, facebook, floating social buttons, floating social widget, google plus, linkedin, pinterest, reddit, share, social bookmarking, social data, social plugin, tumblr, twitter, wordpress
 Author URI:        (http://www.slingpic.com)
 Requires at least: 3.0 
-Tested up to:      3.5.1
-Version:           3.5.1
+Tested up to:      3.5.2
+Version:           3.5.2
 Stable tag:        3.5.0
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
