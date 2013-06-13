@@ -19,6 +19,7 @@ Make it easy to share images from your website through a widget. Image sharing t
  
 Recent Updates
 
+*	"Retina" support for Retina displays and a shiny new set of icons!
 *   "Share counts" show you and your users how many times each of your images has been shared
 *   "Auto Scroll" your visitors to the exact location of the image they came to see.
 *   "Copyright" notice appended to each image share, with full publisher control.
