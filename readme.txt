@@ -7,8 +7,8 @@ Tags:              Image sharing, share image, image bookmarking, add this, addt
 Author URI:        (http://www.slingpic.com)
 Requires at least: 3.0 
 Tested up to:      3.5.2
-Version:           3.5.2
-Stable tag:        3.5.0
+Version:           4.0.0
+Stable tag:        4.0.0
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,10 @@ Version 3 has a new "Context" option which is enabled by default, please check y
 4. Clicking on "more" opens up additional sharing tools (all customisable)
 
 == Changelog ==
+
+= 4.0.0 =
+- *Retina*
+- We just updated Slingpic with support for Retina displays and a shiny new set of icons!
 
 = 3.5.1 =
 - *Bug fixes*
