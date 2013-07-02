@@ -7,32 +7,37 @@ Tags:              Image sharing, share image, image bookmarking, add this, addt
 Author URI:        (http://www.slingpic.com)
 Requires at least: 3.0 
 Tested up to:      3.5.2
-Version:           4.0.0
-Stable tag:        4.0.0
+Version:           5.0.0
+Stable tag:        5.0.0
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
 An image sharing tool, simply hover over an image to reveal a "share" button, once clicked easily share it across multiple social networks.
 
 == Description ==
-Make it easy to share images from your website through a widget. Image sharing tool, Slingpic, makes it easy for visitors to your website to share images across social networks, email and blogging platforms. A visitor simply needs to roll over an image on your site and they can quickly share an image in two clicks. Benefit from incremental traffic from shared images and links back to your website from popular social networks like Pinterest, Facebook, Twitter, Email and blogging platforms.
- 
+Make it easy to share images from your website through a widget. Image sharing tool, Slingpic, makes it easy for visitors to your website to share images across social networks, email and blogging platforms. A visitor simply needs to roll over an image on your site and they can quickly share an image in two clicks. Watch our video and take a test drive via [slingpic.com](http://slingpic.com/ "Slingpic")
+
+1. Why use SlingPic?
+2. Increase traffic
+3. Simple installation
+4. Share everywhere
+5. Fully customisable
+6. Copyright protection
+7. Auto-scroll
+8. Share count
+
 Recent Updates
 
 *	"Retina" support for Retina displays and a shiny new set of icons!
-*   "Share counts" show you and your users how many times each of your images has been shared
-*   "Auto Scroll" your visitors to the exact location of the image they came to see.
-*   "Copyright" notice appended to each image share, with full publisher control.
+*	"Share counts" show you and your users how many times each of your images has been shared
+*	"Auto Scroll" your visitors to the exact location of the image they came to see.
+*	"Copyright" notice appended to each image share, with full publisher control.
 
 Find out more at [slingpic.com](http://slingpic.com/ "Slingpic")
 
 == Installation ==
 1. Unzip slingpic.zip to the  /wp-content/plugins/ directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-
-== Upgrade Notice ==
-
-Version 3 has a new "Context" option which is enabled by default, please check your settings to make sure Slingpic is set up how you want. You can check slingpic.com for more information.
 
 == Screenshots ==
 
@@ -45,6 +50,10 @@ Version 3 has a new "Context" option which is enabled by default, please check y
 4. Clicking on "more" opens up additional sharing tools (all customisable)
 
 == Changelog ==
+
+= 4.0.0 =
+- *Share counts*
+- shows you and your users how many times each of your images has been shared
 
 = 4.0.0 =
 - *Retina*
