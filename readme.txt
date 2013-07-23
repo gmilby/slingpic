@@ -7,8 +7,8 @@ Tags:              Image sharing, share image, image bookmarking, add this, addt
 Author URI:        (http://www.slingpic.com)
 Requires at least: 3.0 
 Tested up to:      3.5.2
-Version:           5.0.0
-Stable tag:        5.0.0
+Version:           5.0.1
+Stable tag:        5.0.1
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,15 +16,6 @@ An image sharing tool, simply hover over an image to reveal a "share" button, on
 
 == Description ==
 Make it easy to share images from your website through a widget. Image sharing tool, Slingpic, makes it easy for visitors to your website to share images across social networks, email and blogging platforms. A visitor simply needs to roll over an image on your site and they can quickly share an image in two clicks. Watch our video and take a test drive via [slingpic.com](http://slingpic.com/ "Slingpic")
-
-1. Why use SlingPic?
-2. Increase traffic
-3. Simple installation
-4. Share everywhere
-5. Fully customisable
-6. Copyright protection
-7. Auto-scroll
-8. Share count
 
 Recent Updates
 
@@ -50,6 +41,10 @@ Find out more at [slingpic.com](http://slingpic.com/ "Slingpic")
 4. Clicking on "more" opens up additional sharing tools (all customisable)
 
 == Changelog ==
+
+= 5.0.1 =
+- *Share counts plus*
+- you can now see which social networks your images are being shared to
 
 = 4.0.0 =
 - *Share counts*
