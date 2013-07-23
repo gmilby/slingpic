@@ -239,7 +239,7 @@ class Slingpic_Options {
 				$i = 0;
 				foreach ( $choices as $value => $label ) {
 					if($id == 'themes'){
-						echo '<input class="radio' . $field_class . '" type="radio" name="slingpic_options[' . $id . ']" id="' . $id . $i . '" value="' . esc_attr( $value ) . '" ' . checked( $options[$id], $value, false ) . '> <label style="display: inline-block; border-bottom: 1px solid gray; margin-bottom: 15px;" for="' . $id . $i . '"><img src="/wp-content/plugins/slingpic/img/'.$value.'.jpg" /></label>';
+						echo '<input class="radio' . $field_class . '" type="radio" name="slingpic_options[' . $id . ']" id="' . $id . $i . '" value="' . esc_attr( $value ) . '" ' . checked( $options[$id], $value, false ) . '> <label style="display: inline-block; border-bottom: 1px solid gray; margin-bottom: 15px;" for="' . $id . $i . '"><img src="'.plugins_url( 'img/'.$value.'.jpg', __FILE__ ).'" /></label>';
 					}else{
 						echo '<input class="radio' . $field_class . '" type="radio" name="slingpic_options[' . $id . ']" id="' . $id . $i . '" value="' . esc_attr( $value ) . '" ' . checked( $options[$id], $value, false ) . '> <label for="' . $id . $i . '">' . $label . '</label>';
 					}
