@@ -17,18 +17,19 @@ An image sharing tool, simply hover over an image to reveal a "share" button, on
 == Description ==
 Make it easy to share images from your website through a widget. Image sharing tool, Slingpic, makes it easy for visitors to your website to share images across social networks, email and blogging platforms. A visitor simply needs to roll over an image on your site and they can quickly share an image in two clicks. Watch our video and take a test drive via [slingpic.com](http://slingpic.com/ "Slingpic")
 
-=Why use SlingPic?=
-- Increase traffic
-- Simple installation
-- Share everywhere
-- Fully customisable
-- Copyright protection
-- Auto-scroll
-- Share count
-- Unobtrusive
-- Automatically applied to all images
-- Wordpress: no shortcodes required
-- Small code size, won’t slow site down
+Why use SlingPic?
+
+*	Increase traffic
+*	Simple installation
+*	Share everywhere
+*	Fully customisable
+*	Copyright protection
+*	Auto-scroll
+*	Share count
+*	Unobtrusive
+*	Automatically applied to all images
+*	Wordpress: no shortcodes required
+*	Small code size, won’t slow site down
 
 Recent Updates
 
